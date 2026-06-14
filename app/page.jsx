@@ -67,10 +67,10 @@ export default function Home() {
         },
       });
 
-      tl2.to(video2, {
-        currentTime: 10,
+      // tl2.to(video2, {
+      //   currentTime: 10,
 
-      });
+      // });
     };
 
 
