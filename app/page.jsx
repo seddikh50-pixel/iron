@@ -27,7 +27,7 @@ export default function Home() {
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: videoWrapper1.current,
-        start: "top top",
+        start: "10% top",
         end: "bottom top",
         scrub: 1,
         pin: true,
