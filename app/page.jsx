@@ -18,6 +18,8 @@ export default function Home() {
     const video1 = videoRef1.current;
     const video2 = videoRef2.current;
 
+    const videos = [video1, video2]
+
     const duration = video1.duration
     console.log(duration);
 
@@ -26,43 +28,26 @@ export default function Home() {
     if (!video1) return;
     if (!video2) return;
 
-    // gsap.to(video1.current, {
-    //   scrollTrigger: {
-    //     trigger: videoWrapper1.current,
-    //     start: "20% top",
-    //     end: "bottom top",
-    //     scrub: 1,
-    //     pin: true,
-    //     markers: true,
-    //   },
-    // })
-
-    const tl1 = gsap.timeline({
-      scrollTrigger: {
-        trigger: videoWrapper1.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        pin: true,
-        markers: true,
-      },
-    });
 
 
 
-    const tl2 = gsap.timeline({
-      scrollTrigger: {
-        trigger: videoWrapper2.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-        pin: true,
-        // markers: true,
-      },
-    });
 
 
     video1.onloadedmetadata = () => {
+
+
+      const tl1 = gsap.timeline({
+        scrollTrigger: {
+          trigger: videoWrapper1.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+          pin: true,
+          markers: true,
+        },
+      });
+
+
       tl1.to(video1, {
         currentTime: 10,
         ease: "none",
@@ -71,11 +56,24 @@ export default function Home() {
 
 
     video2.onloadedmetadata = () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: videoWrapper2.current,
+          start: "top top",
+          end: "bottom top",
+          scrub: 1,
+          pin: true,
+          // markers: true,
+        },
+      });
+
       tl2.to(video2, {
-        currentTime:10,
+        currentTime: 10,
 
       });
     };
+
+
 
 
   }, []);
