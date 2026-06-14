@@ -89,7 +89,7 @@ export default function Home() {
         <video ref={videoRef2} muted playsInline preload="auto" src="output.mp4" className="h-full w-full object-cover"></video>
 
       </div>
-      <div className="w-full h-96"></div>
+      <div className="w-full h-96 bg-blue-600"></div>
     </div>
   );
 }
