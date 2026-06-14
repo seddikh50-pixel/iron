@@ -18,16 +18,29 @@ export default function Home() {
     const video1 = videoRef1.current;
     const video2 = videoRef2.current;
 
-    console.log(video1.duration);
-    console.log(video2.duration);
+    const duration = video1.duration
+    console.log(duration);
+
+
 
     if (!video1) return;
     if (!video2) return;
 
+    // gsap.to(video1.current, {
+    //   scrollTrigger: {
+    //     trigger: videoWrapper1.current,
+    //     start: "20% top",
+    //     end: "bottom top",
+    //     scrub: 1,
+    //     pin: true,
+    //     markers: true,
+    //   },
+    // })
+
     const tl1 = gsap.timeline({
       scrollTrigger: {
         trigger: videoWrapper1.current,
-        start: "10% top",
+        start: "top top",
         end: "bottom top",
         scrub: 1,
         pin: true,
@@ -78,6 +91,7 @@ export default function Home() {
         <video ref={videoRef2} muted playsInline preload="auto" src="output.mp4" className="h-full w-full object-cover"></video>
 
       </div>
+      <div className="w-full h-96"></div>
     </div>
   );
 }
