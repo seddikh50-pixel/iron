@@ -52,7 +52,15 @@ export default function Home() {
         currentTime: 10,
         ease: "none",
       });
+
+        tl1.to(".seddik", {
+        x: 100,
+        duartion: 2 ,
+        ease: "none",
+      });
     };
+
+    
 
 
     video2.onloadedmetadata = () => {
@@ -67,10 +75,10 @@ export default function Home() {
         },
       });
 
-      // tl2.to(video2, {
-      //   currentTime: 10,
+      tl2.to(video2, {
+        currentTime: 10,
 
-      // });
+      });
     };
 
 
@@ -81,8 +89,11 @@ export default function Home() {
     <div>
       {/* <div className="w-full h-96"></div> */}
       <div ref={videoWrapper1} className=" h-screen w-full  ">
+          <div className="seddik absolute text-white text-6xl z-10">
+         hamaidi seddik 
+       </div>
         <video ref={videoRef1} muted playsInline preload="auto" src="output2.mp4" className="h-full w-full object-cover"></video>
-
+     
       </div>
 
       <div ref={videoWrapper2} className=" h-screen w-full  ">
