@@ -5,12 +5,14 @@ import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/src/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRef, useState } from "react";
+import Header from "./components/Header";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP, SplitText);
+gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 
 export default function Home() {
-  const  [counter, setCounter ] = useState(0)
+  const [tl, setTl] = useState(null)
+    const [counter, setCounter] = useState(0)
   const videoRef1 = useRef()
   const videoWrapper1 = useRef()
   const videoRef2 = useRef()
@@ -41,57 +43,59 @@ export default function Home() {
 
 
 
-    video1.onloadedmetadata = () => {
+    // video1.onloadedmetadata = () => {
 
 
-      const tl1 = gsap.timeline({
-        scrollTrigger: {
-          trigger: videoWrapper1.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-          pin: true,
-          markers: true,
-          onUpdate : (self) => {
-            setCounter(self.progress * 100) 
-            console.log(counter)
-          }
-        },
-      });
+    const tl1 = gsap.timeline({
+      scrollTrigger: {
+        trigger: videoWrapper1.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        pin: true,
+        markers: true,
+
+        onUpdate: (self) => {
+          setCounter(self.progress * 100); // من 0 إلى 1
+        }
+      }
+    });
 
 
-      tl1.to(video1, {
-        currentTime: 10,
-        ease: "none",
-      });
+    tl1.to(video1, {
+      currentTime: 10,
+      ease: "none",
+    });
 
-      tl1.to(".seddik", {
-        x: 100,
-        duartion: 2,
-        ease: "none",
-      });
-    };
+    tl1.to(".seddik", {
+      x: 100,
+      duration: 2,
+      ease: "none",
+    }, "<");
+    // };
+
+    setTl(tl1)
 
 
 
 
-    video2.onloadedmetadata = () => {
-      const tl2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: videoWrapper2.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: 1,
-          pin: true,
-          // markers: true,
-        },
-      });
 
-      tl2.to(video2, {
-        currentTime: 10,
+    const tl2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: videoWrapper2.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+        pin: true,
+        // markers: true,
+      },
+    });
 
-      });
-    };
+    tl2.to(video2, {
+      currentTime: 10,
+
+    });
+
 
 
 
@@ -101,8 +105,10 @@ export default function Home() {
     <div>
 
       <div ref={videoWrapper1} className=" h-screen bg-amber-400 w-full flex justify-start items-center  ">
-        <div className="fixed text-amber-300 right-3 top-3 z-30">{counter} %%%%%%%</div>
-       <div className="absolute top-20 right-5 bottom-10 left-5">
+        <Header tl={tl} />
+
+        <div className="fixed text-amber-300 right-9 top-24 z-50 trns duration-200">{Math.floor(counter)}%</div>
+        <div className="absolute top-23 right-5 bottom-10 left-5">
           <div className=" absolute w-7 h-7 border-t-1 border-l-1  border-amber-300"></div>
           <div className=" absolute w-7 h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
           <div className=" absolute w-7 h-7  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
@@ -118,7 +124,7 @@ export default function Home() {
       </div>
 
       <div ref={videoWrapper2} className=" relative h-screen w-full  ">
-          <div className="absolute top-20 right-5 bottom-10 left-5">
+        <div className="absolute top-20 right-5 bottom-10 left-5">
           <div className=" absolute w-7 h-7 border-t-1 border-l-1  border-amber-300"></div>
           <div className=" absolute w-7 h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
           <div className=" absolute w-7 h-7  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>

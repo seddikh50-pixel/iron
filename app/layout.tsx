@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en" className={font.className}>
       <body>
-        <Header />
         {children}
         </body>
     </html>
