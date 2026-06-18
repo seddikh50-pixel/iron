@@ -101,7 +101,7 @@ export default function Home() {
     <div>
 
       <div ref={videoWrapper1} className=" h-screen bg-amber-400 w-full flex justify-start items-center  ">
-        <div className="fixed text-amber-300 right-3 top-3 z-30">{counter} %</div>
+        <div className="fixed text-amber-300 right-3 top-3 z-30">{counter} %%%%%%%</div>
        <div className="absolute top-20 right-5 bottom-10 left-5">
           <div className=" absolute w-7 h-7 border-t-1 border-l-1  border-amber-300"></div>
           <div className=" absolute w-7 h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
