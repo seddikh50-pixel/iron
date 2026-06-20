@@ -149,13 +149,15 @@ export default function Home() {
 
     })
 
-    // console.log(iconRef.current.children)
+    // c onsole.log(iconRef.current.children)
     // console.log(gsap.utils.toArray(iconRef.current.children))
-    // gsap.utils.toArray(iconRef.current.children).forEach((ic, i) => {
-    //   tl2.from(ic, {
-    //     y: 200 * i
-    //   })
-    // })
+    gsap.utils.toArray(iconRef.current.children).forEach((ic, i) => {
+      tl2.from(ic, {
+        z: -6000,
+
+        y: Math.floor(200 * Math.random())
+      })
+    }, ">")
 
 
 
@@ -172,10 +174,10 @@ export default function Home() {
         <div className="fixed text-amber-300 right-9 top-24 z-50 transition-all duration-200 flex justify-center items-center gap-2"><h1>{Math.floor(counter)}%</h1>       <Circle fill="yellow" size={15} />
         </div>
         <div className="absolute top-23 right-5 bottom-10 left-5">
-          <div className=" absolute w-7 h-7 border-t-1 border-l-1  border-amber-300"></div>
-          <div className=" absolute w-7 h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
-          <div className=" absolute w-7 h-7  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
-          <div className=" absolute w-7 h-7 border-l-1 border-b-1 bottom-0 border-amber-300"></div>
+          <div className=" absolute w-7 h-7 rounded-sm border-t-1 border-l-1  border-amber-300"></div>
+          <div className=" absolute w-7 h-7 rounded-sm border-r-1 border-t-1  right-0 border-amber-300"></div>
+          <div className=" absolute w-7 h-7 rounded-sm  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
+          <div className=" absolute w-7 h-7 rounded-sm   border-l-1 border-b-1 bottom-0 border-amber-300"></div>
         </div>
         <div className="text1 absolute text-white text-6xl z-10 pl-10  overflow-hidden ">
           <h1 className="mb-5 text-8xl">I am </h1>
@@ -217,20 +219,20 @@ export default function Home() {
 
 
         <div className="absolute top-10 right-5 bottom-10 left-5">
-          <div className=" absolute w-7 h-7 border-t-1 border-l-1  border-amber-300"></div>
-          <div className=" absolute w-7 h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
-          <div className=" absolute w-7 h-7  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
-          <div className=" absolute w-7 h-7 border-l-1 border-b-1 bottom-0 border-amber-300"></div>
+          <div className=" absolute w-7 rounded-sm h-7 border-t-1 border-l-1  border-amber-300"></div>
+          <div className=" absolute w-7 rounded-sm h-7 border-r-1 border-t-1  right-0 border-amber-300"></div>
+          <div className=" absolute w-7 rounded-sm h-7  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
+          <div className=" absolute w-7 rounded-sm h-7 border-l-1 border-b-1 bottom-0 border-amber-300"></div>
         </div>
         <video ref={videoRef2} muted playsInline preload="auto" src="output.mp4" className="h-full w-full object-cover"></video>
-        <div ref={iconRef} className="icons absolute z-100 inset-5 text-white flex justify-center items-center gap-5">
-          <FaReact size={200} />
-          <FaHtml5 size={200} />
-          <FaJsSquare size={200} />
-          <FaCss3Alt size={200} />
-          <FaNode size={200} />
-          <SiGsap size={200} />
-          <SiNextdotjs size={200} />
+        <div ref={iconRef} className="icons absolute z-100 inset-5 text-white flex justify-center items-center gap-5 perspective-[1000px]">
+          <FaCss3Alt color="#FCD34D" size={200} />
+          <FaHtml5 color="#FCD34D" size={200} />
+          <FaJsSquare color="#FCD34D" size={200} />
+          <FaReact color="#FCD34D" size={200} />
+          <SiNextdotjs color="#FCD34D" size={200} />
+          <FaNode color="#FCD34D" size={200} />
+          <SiGsap color="#FCD34D" size={200} />
         </div>
       </div>
     </div>

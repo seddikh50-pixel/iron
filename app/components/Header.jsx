@@ -25,8 +25,8 @@ useEffect(() => {
     <header className='header h-20 fixed top-0 z-10 bg-black/5 border-b-[0.5px] border-amber-50/5 flex justify-between items-center px-20 text-gray-300  w-full'>
         <div className='flex items-center gap-2'><Circle fill="yellow" stroke='yellow' size={15}/> Hamaidi &ensp;  / &ensp; Abou Seddik</div>
         <div className='flex gap-10'>
-          <h1>SYSTEMS</h1>
-          <h1>ARCHIVE</h1>
+          <h1>HERO</h1>
+          <h1>SKILLS</h1>
         </div>
         <div>
         
