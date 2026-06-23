@@ -14,11 +14,6 @@ const Headers = ({ tl }) => {
   useEffect(() => {
     if (!tl) return;
 
-
-    // tl.from(".header", {
-    //   y: 100,
-    //   ease: "none",
-    // }, 0);
     tl.to(".header", {
       backgroundColor: "black",
       ease: "none",
@@ -80,9 +75,6 @@ const Headers = ({ tl }) => {
 
         }}
       >
-
-
-
         <Link className='contact font-bold border relative overflow-hidden z-1  xl:px-4 sm:px-2 px-1 xl:py-1 py-[2px] ml-5 border-gray-700 sm:text-sm rounded-4xl flex gap-1 xl:text-sm sm:text-[10px] text-[10px]  items-center' href={"https://www.linkedin.com/in/hamaidi-seddik-28ab4634a/"} target="_blank">
           <span className=''>CONTACT</span>
           <MoveUpRight size={20} />

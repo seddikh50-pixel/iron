@@ -29,12 +29,7 @@ export default function Home() {
   const videoWrapper2 = useRef()
   const iconRef = useRef()
 
-  useEffect(() => {
-    if (!iconRef) return null
 
-
-
-  }, []);
   useGSAP(() => {
     const video1 = videoRef1.current;
     const video2 = videoRef2.current;
@@ -50,19 +45,8 @@ export default function Home() {
     })
 
 
-
-
-
     if (!video1) return;
     if (!video2) return;
-
-
-    const duration = video2.duration
-    console.log(duration)
-
-
-
-    // video1.onloadedmetadata = () => {
 
 
     const tl1 = gsap.timeline({
@@ -123,15 +107,7 @@ export default function Home() {
 
     setTl(tl1)
 
-    // }
-
-
-
-
-
-
-
-
+  
 
 
     const tl2 = gsap.timeline({
