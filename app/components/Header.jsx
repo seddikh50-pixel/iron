@@ -47,6 +47,8 @@ const Headers = ({ tl }) => {
           }}  >SKILLS</h1>
       </div>
       <div className='' onMouseEnter={() => {
+        gsap.killTweensOf('.btn');
+        gsap.killTweensOf('.contact');
         gsap.to('.btn', {
           duration: 0.1,
           left: 0,
@@ -62,13 +64,15 @@ const Headers = ({ tl }) => {
 
       }}
         onMouseLeave={() => {
+          gsap.killTweensOf('.btn');
+          gsap.killTweensOf('.contact');
           gsap.to('.btn', {
             duration: 0.1,
             left: "-100%",
             ease: "power2.out"
           })
           gsap.to('.contact', {
-            duration:0.5,
+            duration: 0.5,
             color: "white",
             delay: 0.2,
             ease: "power2.out"
