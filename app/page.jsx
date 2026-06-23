@@ -28,11 +28,9 @@ export default function Home() {
   const videoRef2 = useRef()
   const videoWrapper2 = useRef()
   const iconRef = useRef()
-  const [children, setChildren] = useState([]);
 
   useEffect(() => {
     if (!iconRef) return null
-    const children = Array.from(iconRef.current.children)
 
 
 
@@ -154,6 +152,7 @@ export default function Home() {
     gsap.utils.toArray(iconRef.current.children).forEach((ic, i) => {
       tl2.from(ic, {
         z: -6000,
+        opacity : 0.2,
 
         y: Math.floor(200 * Math.random())
       })
@@ -167,9 +166,9 @@ export default function Home() {
   }, []);
   return (
     <div className="overflow-x-hidden ">
-
-      <div ref={videoWrapper1} className=" h-screen bg-amber-400 w-full flex justify-start items-center  ">
-        <Header tl={tl} />
+  <Header tl={tl} />  
+      <div ref={videoWrapper1} className="hero h-screen bg-amber-400 w-full flex justify-start items-center  ">
+      
 
         <div className="fixed text-amber-300 right-9 top-24 z-50 transition-all duration-200 flex justify-center items-center gap-2"><h1>{Math.floor(counter)}%</h1>       <Circle fill="yellow" size={15} />
         </div>
@@ -180,14 +179,14 @@ export default function Home() {
           <div className=" absolute w-7 h-7 rounded-sm   border-l-1 border-b-1 bottom-0 border-amber-300"></div>
         </div>
         <div className="text1 absolute text-white text-6xl z-10 pl-10  overflow-hidden ">
-          <h1 className="mb-5 text-8xl">I am </h1>
-          <h1 className="text font-bold text-8xl">Ham Abou <span className="text-[#d4af37]">Seddik</span></h1>
-          <p className="paragraph text-2xl w-1/2 mt-10 text-gray-400">I'm a Web Developer specializing in HTML, CSS, JavaScript, React, Next.js, and Node.js. I build modern, responsive, and interactive websites and web applications, focusing on performance, clean code, and engaging user experiences.</p>
+          <h1 className="mb-5 xl:text-8xl sm:text-5xl text-5xl font-bold ">I am </h1>
+          <h1 className="text font-bold xl:text-8xl sm:text-5xl text-5xl">Ham Abou <span className="text-[#d4af37]">Seddik</span></h1>
+          <p className="paragraph xl:text-2xl sm:text-xl text-xl  xl:w-1/2 sm:w-4/6 mt-10 text-gray-400">I'm a Web Developer specializing in HTML, CSS, JavaScript, React, Next.js, and Node.js. I build modern, responsive, and interactive websites and web applications, focusing on performance, clean code, and engaging user experiences.</p>
         </div>
-        <div className="text2 absolute text-white text-6xl z-10 pl-10  overflow-hidden ">
-          <h1 className="mb-5 text-8xl">Built with </h1>
-          <h1 className="text font-bold text-8xl"> Next.js & <span className="text-[#d4af37]">GSAP</span></h1>
-          <p className="paragraph text-2xl w-1/2 mt-10 text-gray-400">Crafting interactive web experiences with modern tools. A smooth blend of performance and animation. Building fast, animated, and modern web experiences.</p>
+        <div className="text2 absolute text-white text-6xl z-10 pl-10  overflow-hidden p-5 ">
+          <h1 className="mb-5  xl:text-8xl sm:text-5xl text-5xl">Built with </h1>
+          <h1 className="text font-bold xl:text-8xl sm:text-5xl text-5xl"> Next.js & <span className="text-[#d4af37]">GSAP</span></h1>
+          <p className="paragraph xl:text-2xl text-xl  xl:w-1/2 sm:w-4/6  mt-10 text-gray-400 sm:text-sm">Crafting interactive web experiences with modern tools. A smooth blend of performance and animation. Building fast, animated, and modern web experiences.</p>
         </div>
         <div className="message absolute text-white flex flex-col justify-between h-30 px-2 py-3  right-20 top-40 z-2 w-80  backdrop-blur-md  bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
           <h1>''Building experiences, not just websites.''</h1>
@@ -215,7 +214,7 @@ export default function Home() {
 
       </div>
 
-      <div ref={videoWrapper2} className=" relative h-screen w-full overflow-hidden  ">
+      <div ref={videoWrapper2} className="skills relative h-screen w-full overflow-hidden  ">
 
 
         <div className="absolute top-10 right-5 bottom-10 left-5">
