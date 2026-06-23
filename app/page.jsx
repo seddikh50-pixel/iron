@@ -57,7 +57,7 @@ export default function Home() {
     if (!video2) return;
 
 
-    const duration = video1.duration
+    const duration = video2.duration
   console.log(duration)
 
 
@@ -145,7 +145,7 @@ export default function Home() {
     });
 
     tl2.to(video2, {
-      currentTime: 10,
+      currentTime: 7.041667,
 
     })
 
