@@ -178,24 +178,24 @@ export default function Home() {
           <div className=" absolute w-7 h-7 rounded-sm  border-r-1 border-b-1  right-0 bottom-0 border-amber-300"></div>
           <div className=" absolute w-7 h-7 rounded-sm   border-l-1 border-b-1 bottom-0 border-amber-300"></div>
         </div>
-        <div className="text1 absolute text-white text-6xl z-10 pl-10  overflow-hidden ">
-          <h1 className="mb-5 xl:text-8xl sm:text-5xl text-5xl font-bold ">I am </h1>
-          <h1 className="text font-bold xl:text-8xl sm:text-5xl text-5xl">Ham Abou <span className="text-[#d4af37]">Seddik</span></h1>
+        <div className="text1 absolute text-white text-6xl z-10 pl-10  overflow-hidden xl:mt-5 lg:mt-5 md:mt-10 sm:mt-20 mt-30 ">
+          <h1 className="mb-5 xl:text-8xl lg:text-7xl md:text-6xl  sm:text-5xl text-3xl font-bold ">I am </h1>
+          <h1 className="text font-bold xl:text-8xl lg:text-7xl sm:text-5xl text-3xl">Ham Abou <span className="text-[#d4af37]">Seddik</span></h1>
           <p className="paragraph xl:text-2xl sm:text-xl text-xl  xl:w-1/2 sm:w-4/6 mt-10 text-gray-400">I'm a Web Developer specializing in HTML, CSS, JavaScript, React, Next.js, and Node.js. I build modern, responsive, and interactive websites and web applications, focusing on performance, clean code, and engaging user experiences.</p>
         </div>
         <div className="text2 absolute text-white text-6xl z-10 pl-10  overflow-hidden p-5 ">
-          <h1 className="mb-5  xl:text-8xl sm:text-5xl text-5xl">Built with </h1>
-          <h1 className="text font-bold xl:text-8xl sm:text-5xl text-5xl"> Next.js & <span className="text-[#d4af37]">GSAP</span></h1>
-          <p className="paragraph xl:text-2xl text-xl  xl:w-1/2 sm:w-4/6  mt-10 text-gray-400 sm:text-sm">Crafting interactive web experiences with modern tools. A smooth blend of performance and animation. Building fast, animated, and modern web experiences.</p>
+          <h1 className="mb-5  xl:text-8xl sm:text-5xl lg:text-7xl md:text-6xl  text-5xl">Built with </h1>
+          <h1 className="text font-bold xl:text-8xl lg:text-7xl md:text-6xl  sm:text-5xl text-5xl"> Next.js & <span className="text-[#d4af37]">GSAP</span></h1>
+          <p className="paragraph xl:text-2xl lg:text-2xl md:text-xl text-sm    xl:w-1/2 sm:w-4/6  mt-10 text-gray-400 sm:text-sm">Crafting interactive web experiences with modern tools. A smooth blend of performance and animation. Building fast, animated, and modern web experiences.</p>
         </div>
-        <div className="message absolute text-white flex flex-col justify-between h-30 px-2 py-3  right-20 top-40 z-2 w-80  backdrop-blur-md  bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
+        <div className="message absolute text-white flex flex-col justify-between h-30 px-2 py-3  xl:right-20 lg:right-20 md:right-20 sm:right-5 right-5 top-40 z-2 w-80  backdrop-blur-md  bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
           <h1>''Building experiences, not just websites.''</h1>
           <div className="flex justify-between px-2">
             <h1 className=" text-white/50">Abou</h1>
             <h1 className="text-amber-300/50 ">hamaidi seddik</h1>
           </div>
         </div>
-        <div className="message  absolute text-white flex flex-col justify-between h-30 px-2 py-3  right-20 top-103 z-2 w-80 backdrop-blur-md  bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
+        <div className="message xl:flex lg:flex hidden   absolute text-white  flex-col justify-between xl:right-20 lg:right-20 md:right-20 sm:right-5 right-5  h-30 px-2 py-3   top-103 z-2 w-80 backdrop-blur-md  bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
           <h1>''Developer. Designer. Dreamer. Builder.''</h1>
           <div className="flex justify-between px-2">
             <h1 className=" text-white/50">Abou</h1>
@@ -203,7 +203,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="message  absolute text-white flex flex-col justify-between h-30 px-2 py-3  right-20 top-165 z-2 w-80 backdrop-blur-md   bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
+        <div className="message  absolute text-white flex flex-col justify-between h-30 px-2 py-3 xl:right-20 lg:right-20 md:right-20 sm:right-5 right-5     top-165 z-2 w-80 backdrop-blur-md   bg-[#121211]/50 rounded-lg border-[#292927] border-[0.5px] ">
           <h1>''What ends one project starts another idea.''</h1>
           <div className="flex justify-between px-2">
             <h1 className=" text-white/50">Abou</h1>
