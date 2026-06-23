@@ -58,7 +58,7 @@ export default function Home() {
 
 
     const duration = video1.duration
-
+  console.log(duration)
 
 
 
@@ -80,7 +80,7 @@ export default function Home() {
     });
 
     tl1.to(video1, {
-      currentTime: duration,
+      currentTime: 7.041667,
       ease: "none",
     });
 
@@ -118,15 +118,17 @@ export default function Home() {
       opacity: 0,
       duration: 2,
       ease: "none",
-    });
-
-
-
-
-
-
+    })
+  
 
     setTl(tl1)
+
+  // }
+
+
+
+
+
 
 
 
