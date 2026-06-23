@@ -104,12 +104,9 @@ export default function Home() {
       ease: "none",
     })
 
-
     setTl(tl1)
 
   
-
-
     const tl2 = gsap.timeline({
       scrollTrigger: {
         trigger: videoWrapper2.current,
@@ -125,8 +122,7 @@ export default function Home() {
 
     })
 
-    // c onsole.log(iconRef.current.children)
-    // console.log(gsap.utils.toArray(iconRef.current.children))
+
     gsap.utils.toArray(iconRef.current.children).forEach((ic, i) => {
       tl2.from(ic, {
         z: -6000,
@@ -135,19 +131,12 @@ export default function Home() {
         y: Math.floor(200 * Math.random())
       })
     }, ">")
-
-
-
-
-
-
   }, []);
+
   return (
     <div className="overflow-x-hidden ">
       <Header tl={tl} />
-      <div ref={videoWrapper1} className="hero h-screen bg-amber-400 w-full flex justify-start items-center  ">
-
-
+      <div ref={videoWrapper1} className="hero h-screen bg-black w-full flex justify-start items-center  ">
         <div className="fixed text-amber-300 right-9 top-24 z-50 transition-all duration-200 flex justify-center items-center gap-2"><h1>{Math.floor(counter)}%</h1>       <Circle fill="yellow" size={15} />
         </div>
         <div className="absolute top-23 right-5 bottom-10 left-5">
